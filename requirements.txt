@@ -3,3 +3,5 @@ numpy==1.24.2  # For numerical operations
 scikit-learn==1.2.2  # For machine learning models and metrics
 matplotlib==3.7.1  # For visualizations
 seaborn==0.12.2  # For enhanced data visualizations
+pytest
+flake8
