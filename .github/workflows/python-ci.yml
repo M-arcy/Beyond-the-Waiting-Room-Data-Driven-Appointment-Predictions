@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.7,3.8, 3.9, 3.10]  # Match the Python version used in your project
+        python-version: [3.8, 3.9, 3.10, 3.12]  # Match the Python version used in your project
 
     steps:
     - name: Checkout repository
