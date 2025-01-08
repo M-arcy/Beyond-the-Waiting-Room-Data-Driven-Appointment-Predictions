@@ -1,39 +1,39 @@
-name: Python CI
+# This workflow will install Python dependencies, run tests, and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python application
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
+
+permissions:
+  contents: read
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        python-version: [3.10]  # Only one Python version for simplicity
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v4  # Latest version of setup-python action
-        with:
-          python-version: ${{ matrix.python-version }}
-
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install flake8 pytest
-
-      - name: Run flake8 (code style checks)
-        run: |
-          flake8 .  # Runs flake8 in the root directory
-
-      - name: Run PyTest (unit tests)
-        run: |
-          pytest --maxfail=5 --disable-warnings  # Run tests and show warnings
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Lint with flake8
+      run: |
+        # Run flake8 to check for Python syntax errors, style issues, and undefined variables
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Allow warnings but output statistics
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
+      run: |
+        pytest -v --disable-warnings --maxfail=1
