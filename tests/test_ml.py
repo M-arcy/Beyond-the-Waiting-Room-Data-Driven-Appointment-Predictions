@@ -1,5 +1,6 @@
 import pytest
-from ml.data import clean_data
+from data import clean_data
+from model import train_model 
 import pandas as pd
 
 def test_clean_data_runs():
