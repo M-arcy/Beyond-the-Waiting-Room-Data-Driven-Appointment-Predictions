@@ -3,8 +3,14 @@ import pandas as pd
 import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import precision_score, recall_score, f1_score
-from data import clean_data  # Import from root-level data.py
+from data import clean_data, load_data  # Import from root-level data.py
 from model import train_model  # Import from root-level model.py
+
+#test 0 - check that pandas can be imported successfully
+
+def test_pandas_import():
+    """Check that pandas can be imported successfully."""
+    assert pd.__version__ is not None, "Pandas is not installed properly."
 
 # Test 1: Check that `clean_data` returns a DataFrame without NaN values.
 def test_clean_data():

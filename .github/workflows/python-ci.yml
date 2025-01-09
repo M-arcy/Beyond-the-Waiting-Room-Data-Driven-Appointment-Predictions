@@ -24,7 +24,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         pip install -r requirements.txt
-
+    - name: Verify installed packages (optional)
+      run: pip list  # Lists all installed packages for verification 
     - name: Run tests with pytest
       env:
         PYTHONPATH: ${{ github.workspace }}  # Add the root directory to the Python path
