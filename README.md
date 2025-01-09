@@ -59,7 +59,7 @@ Python 3.10: Core language for analysis and modeling.
 * pandas for data manipulation
 * numpy for numerical operations
 * scikit-learn for machine learning models and evaluation metrics
-* matplotlib and seaborn for visualizations
+* matplotlib, plotly and seaborn for visualizations
 * Jupyter Notebooks: Used for exploratory data analysis (EDA).
 * Joblib: Used for saving and loading trained models.
 * (future)GitHub Actions: For continuous integration (CI) testing.
