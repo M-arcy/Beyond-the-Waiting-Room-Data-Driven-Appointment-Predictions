@@ -56,13 +56,13 @@ The Gradient Boosting Classifier achieved the highest accuracy and was tuned for
 ## Technologies Used
 Python 3.10: Core language for analysis and modeling.
 #### Libraries:
-*pandas for data manipulation
-*numpy for numerical operations
-*scikit-learn for machine learning models and evaluation metrics
-*matplotlib and seaborn for visualizations
-*Jupyter Notebooks: Used for exploratory data analysis (EDA).
-*Joblib: Used for saving and loading trained models.
-*(future)GitHub Actions: For continuous integration (CI) testing.
+* pandas for data manipulation
+* numpy for numerical operations
+* scikit-learn for machine learning models and evaluation metrics
+* matplotlib and seaborn for visualizations
+* Jupyter Notebooks: Used for exploratory data analysis (EDA).
+* Joblib: Used for saving and loading trained models.
+* (future)GitHub Actions: For continuous integration (CI) testing.
 ## Project Deliverables
 * Models: A tuned Gradient Boosting Classifier saved as tuned_gradient_boosting_model.pkl.
 * Visualizations: Graphs illustrating data distribution, feature importance, and model performance.
