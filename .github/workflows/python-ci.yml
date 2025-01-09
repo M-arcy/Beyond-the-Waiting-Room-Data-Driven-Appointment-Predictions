@@ -26,5 +26,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run tests with pytest
+      env:
+        PYTHONPATH: ${{ github.workspace }}  # Add the root directory to the Python path
       run: |
         pytest --disable-warnings --maxfail=3

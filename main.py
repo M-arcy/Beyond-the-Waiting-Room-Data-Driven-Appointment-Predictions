@@ -15,7 +15,7 @@ def compare_and_select_best_model(X, y):
     models = {
         "Logistic Regression": LogisticRegression(class_weight='balanced', max_iter=1000, random_state=42),
         "Random Forest": RandomForestClassifier(class_weight='balanced', random_state=42),
-        "Gradient Boosting": GradientBoostingClassifier(random_state=42)
+        "Gradient Boosting": GradientBoostingClassifier(n_estimators=600, random_state=42)  # Updated to use n_estimators=600
     }
 
     model_scores = {}
