@@ -55,6 +55,13 @@ def save_model(model, path):
     joblib.dump(model, path)
     print(f"Model saved to {path}")
 
+def train_model(X_train, y_train):
+    """Trains a Gradient Boosting Classifier on the provided data."""
+    model = GradientBoostingClassifier(random_state=42)
+    model.fit(X_train, y_train)
+    return model  #for test_ml pystest 
+
+
 # Main function
 def main():
     data_path = "./data/dummy_encoded_dataset.csv"
