@@ -49,9 +49,9 @@ Deployment Plan: Save the trained model to make predictions and suggest improvem
 
 The Gradient Boosting Classifier achieved the highest accuracy and was tuned for hyperparameters (n_estimators=600, learning_rate, max_depth, and min_samples_split). Initial results included:
 
->Accuracy: 71.7%
->Precision: ~54%
->Recall: ~1.39% (before tuning, indicating room for improvement).
+>Accuracy: 71.5%
+>Precision: ~63%
+>Recall: 2% (before tuning, indicating room for improvement).
 >
 ## Technologies Used
 Python 3.10: Core language for analysis and modeling.
@@ -68,23 +68,6 @@ Python 3.10: Core language for analysis and modeling.
 * Visualizations: Graphs illustrating data distribution, feature importance, and model performance.
 * Reports: Documentation of findings and improvement suggestions.
 
-## Installation and Usage
-
-``` python
-git clone https://github.com/username/repository-name.git
-cd repository-name
-
-#create a virtual environment and activate it:
-python -m venv venv
-source venv/bin/activate  # MacOS/Linux
-venv\Scripts\activate  # Windows
-
-#install dependencies
-pip install -r requirements.txt
-
-#run the main script:
-python main.py
-```
 ## Future Improvements
 Explore additional hyperparameters (subsample, max_features) to further tune the Gradient Boosting model.<br>
 Investigate imbalanced class strategies, such as SMOTE (Synthetic Minority Oversampling Technique).<br>
